@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // Route Imports:
-import Index from "./routes";
+import Index from "./routes/Index.jsx";
 import Projects from "./routes/Projects";
 import Profile from "./routes/Profile";
 import Error from "./routes/Error";
