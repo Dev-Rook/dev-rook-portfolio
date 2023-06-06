@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "projectId": 1,
+        "link": "https://www.freecodecamp.org/Developer-Rook",
+        "title": "Responsive Web Design Ceritification",
+        "year": 2023,
+        "type": "Free Code Camp",
+        "description": "My prior knowledge on Html & Css allowed me to go through this course with relative ease. This Ceritification paired with the projects I have build on my own should solidify my credibility as a web developer."
+    }
+]
