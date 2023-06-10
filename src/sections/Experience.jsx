@@ -19,6 +19,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 // Material UI Timeline Imports End
 
 import LaunchIcon from "@mui/icons-material/Launch";
+import StartIcon from "@mui/icons-material/Start";
 
 const Experience = () => {
   const [data, setData] = useState(experience);
@@ -65,6 +66,14 @@ const Experience = () => {
           );
         })}
       </>
+      <br />
+      <br />
+      <div className={"CallToActionBox"}>
+        <Link to={"/projects"} onClick={scrollUp}>
+          <button className={"Button"}>Vew All</button>
+        </Link>
+        <StartIcon sx={{ color: "white", fontSize: 25 }} />
+      </div>
     </div>
   );
 };
