@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
