@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 // Hooks Import:
 import useScrollUp from "../hooks/useScrollUp";
+import useFirebase from "../hooks/useFirebase";
 
 // Styles Import:
 import styles from "../styles/sec-styles/grid.module.scss";
+
 // Json Import:
 import work from "../data/work.json";
 
@@ -13,8 +15,9 @@ import work from "../data/work.json";
 import StartIcon from "@mui/icons-material/Start";
 
 const Work = () => {
-  const [data, setData] = useState(work);
+  // const [data, setData] = useState(work);
   const { scrollUp } = useScrollUp();
+  const { data, loading, error } = useFirebase();
   return (
     <div className={"section"} id="work">
       <p className={"title"}>Work</p>
@@ -24,13 +27,13 @@ const Work = () => {
           return (
             <div className={styles.card} key={value.id}>
               <div className={styles.imgContainer}>
-                <img src={value.preview} alt="" className={styles.img} />
+                <img src={value.image} alt="" className={styles.img} />
               </div>
 
               <div className={styles.titleContainer}>
-                <p className={styles.title}>{value.title}</p>
-                <a href={value.link} target="_blank" rel="noreferrer">
-                  <svg
+                <p className={styles.title}>{value.name}</p>
+                <a href={value.demoLink} target="_blank" rel="noreferrer">
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
