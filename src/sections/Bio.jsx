@@ -34,8 +34,8 @@ const Bio = () => {
           <div className={styles.iconContainer}>
             {data?.map((item) => {
               return (
-                <a href={item.link} key={item.id}>
-                  <div className={styles.card}>
+                <a href={item.link} target="_blank" rel="noreferrer" key={item.id}>
+                  <div className={styles.card}> 
                     <div className={styles.imageContainer}>
                       <img src={item.image} alt="" className={styles.img} />
                     </div>
