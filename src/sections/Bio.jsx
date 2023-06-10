@@ -16,7 +16,7 @@ const Bio = () => {
   const { scrollUp } = useScrollUp();
   return (
     <div className="section">
-      <p className={"title"}>Bio</p>
+      <p className={"sectionTitle"}>Bio</p>
       <div className={styles.contentContainer}>
         <p className={styles.bio}>
           I am a Fullstack Web Developer with a passion for

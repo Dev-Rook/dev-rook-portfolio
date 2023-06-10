@@ -25,7 +25,7 @@ const Experience = () => {
   const { scrollUp } = useScrollUp();
   return (
     <div className={"section"}>
-      <p className={"title"}>Experience</p>
+      <p className={"sectionTitle"}>Experience</p>
       <>
         {data?.slice(0, 3).map((value) => {
           return (

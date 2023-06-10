@@ -1,18 +1,21 @@
-.App {
+.app {
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+
   justify-content: center;
   align-items: center;
-  height: fit-content;
+  margin: auto;
+
+  height: 100%;
   width: 100%;
 
   .Back_To_Top_Icon {
     position: fixed;
     bottom: 50px;
     right: 5px;
-    z-index: 20;
+    z-index: 99;
     cursor: pointer;
 
     transition: 1.5s;

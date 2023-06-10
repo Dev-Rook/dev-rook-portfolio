@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "preview": "",
+        "title": "Montego Bay Yacht Club",
+        "page_link": "/mbyc",
+        "link": "https://yachtclubmobay.vercel.app",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla ex in quo officiis rerum?"
+    },
+    {
+        "id": 2,
+        "preview": "",
+        "title": "D&E Marine Ltd",
+        "link": "https://langford-marine.vercel.app/",
+        "page_link": "/demarine",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla ex in quo officiis rerum?"
+    },
+    {
+        "id": 3,
+        "preview": "Image",
+        "title": "Boat",
+        "page_link": "/link",
+        "link": "https://www.youtube.com",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nulla ex in quo officiis rerum?"
+    }
+]

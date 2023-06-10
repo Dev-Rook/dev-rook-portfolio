@@ -20,7 +20,7 @@ const Work = () => {
   const { data, loading, error } = useFirebase();
   return (
     <div className={"section"} id="work">
-      <p className={"title"}>Work</p>
+      <p className={"sectionTitle"}>Work</p>
 
       <div className={styles.contentCotainer}>
         {data?.map((value) => {

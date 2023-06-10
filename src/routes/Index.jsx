@@ -8,6 +8,8 @@ import Bio from "../sections/Bio"
 import Tech from "../sections/Tech"
 import Work from "../sections/Work"
 import Experience from "../sections/Experience"
+import Posts from "../sections/Posts"
+import ContactForm from "../components/ContactForm"
 
 const Index = () => {
   const title = "Developer Rook"
@@ -16,8 +18,10 @@ const Index = () => {
       <Hero title={title} />
       <Bio />
       <Work />
-      <Tech />
+      {/* <Tech /> */}
       <Experience />
+      <Posts />
+      <ContactForm />
     </div>
   )
 }

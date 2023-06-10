@@ -11,7 +11,7 @@ const Tech = () => {
   const [data, setData] = useState(tech);
   return (
     <div className="section">
-      <p className="title">Tech/Skills</p>
+      <p className="sectionTitle">Tech/Skills</p>
       <div className="grid">
         {data?.map((item) => {
           return (

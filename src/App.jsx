@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import useScrollUp from "./hooks/useScrollUp.jsx";
 
 // Styles Import:
-import styles from "./App.scss";
+import styles from "./app.module.scss";
 
 import NavigationIcon from "@mui/icons-material/Navigation";
 
@@ -21,7 +21,7 @@ import Error from "./routes/Error";
 const App = () => {
   const { scrollUp, backToTop } = useScrollUp();
   return (
-    <div className={"App"}>
+    <div className={styles.app}>
       <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
