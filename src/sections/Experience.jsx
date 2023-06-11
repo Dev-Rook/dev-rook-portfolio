@@ -6,6 +6,7 @@ import useScrollUp from "../hooks/useScrollUp";
 
 // Styles Import:
 import styles from "../styles/sec-styles/experience.module.scss";
+
 // Json Import:
 import experience from "../data/experience.json";
 
@@ -49,17 +50,16 @@ const Experience = () => {
                   <span>
                     <p className={styles.Year}>{value.year}</p>
                     <p className={styles.Title}>{value.title}</p>
-                    <a
-                      href={value.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={scrollUp}
-                    >
-                      <LaunchIcon sx={{ color: "red" }} />
-                    </a>
                   </span>
                   <p className={styles.Description}>{value.description}</p>
-                  <p className={styles.Type}>{value.type}</p>
+                  <a
+                    href={value.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={scrollUp}
+                  >
+                    <p className={styles.Type}>{value.type}</p>
+                  </a>
                 </TimelineContent>
               </TimelineItem>
             </Timeline>

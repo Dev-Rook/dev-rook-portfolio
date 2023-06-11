@@ -1,8 +1,13 @@
-import React from 'react'
+// Styles Import:
+import  "../styles/global.scss";
+
+import ErrorLabel from "../components/ErrorLabel";
 
 const Error = () => {
   return (
-    <div>Error</div>
+    <div className="utilityPage">
+      <ErrorLabel />
+    </div>
   )
 }
 

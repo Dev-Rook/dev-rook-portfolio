@@ -19,8 +19,10 @@
     gap: 8px;
     // cursor: pointer;
 
+    // margin: auto;
+
     height: fit-content;
-    width: 100%;
+    width: 300px;
 
     .imgContainer {
       display: flex;
@@ -86,6 +88,14 @@
 
     .description {
       font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .contentCotainer {
+    .card {
+      width: 100%;
     }
   }
 }

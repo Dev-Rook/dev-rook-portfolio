@@ -3,7 +3,7 @@ import styles from "../styles/comp-styles/input.module.scss";
 // Material UI Import:
 import SearchIcon from "@mui/icons-material/Search";
 
-const Input = ({ setSearch }) => {
+const Input = ({ setSearch, placeholder }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inputContainer}>
@@ -11,7 +11,7 @@ const Input = ({ setSearch }) => {
         <input
           type="text"
           className={styles.input}
-          placeholder="Search via type"
+          placeholder={`Search via ${placeholder}`}
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>

@@ -20,19 +20,20 @@ const Projects = () => {
   const title = "Projects";
   const subtitle = "Project Gallery";
 
+  const placeholder = "title";
   const [search, setSearch] = useState("");
   const { data, loading, error } = useFirebase();
   return (
     <div className="page">
       <Hero title={title} subtitle={subtitle} />
       <div className={"section"} id="work">
-        <Input setSearch={setSearch} />
+        <Input setSearch={setSearch} placeholder={placeholder} />
         <div className={styles.contentCotainer}>
           {data
             ?.filter((item) => {
               return search.toLowerCase() === ""
                 ? item
-                : item.type.toLowerCase().includes(search);
+                : item.name.toLowerCase().includes(search);
             })
             .map((value) => {
               return (

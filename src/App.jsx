@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Index from "./routes/Index.jsx";
 import Projects from "./routes/Projects";
 import Profile from "./routes/Profile";
+import Posts from "./routes/Posts";
 import Error from "./routes/Error";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/posts" element={<Posts />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
