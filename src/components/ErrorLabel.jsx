@@ -1,11 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../styles/global.scss";
 import styles from "../styles/comp-styles/errorLabel.module.scss";
 
 // Hooks Import:
 import useScrollUp from "../hooks/useScrollUp";
-const { scrollUp } = useScrollUp();
 
 import StartIcon from "@mui/icons-material/Start";
 
