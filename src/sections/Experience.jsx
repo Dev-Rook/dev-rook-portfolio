@@ -69,7 +69,7 @@ const Experience = () => {
       <br />
       <br />
       <div className={"CallToActionBox"}>
-        <Link to={"/projects"} onClick={scrollUp}>
+        <Link to={"/dev"} onClick={scrollUp}>
           <button className={"Button"}>Vew All</button>
         </Link>
         <StartIcon sx={{ color: "white", fontSize: 25 }} />

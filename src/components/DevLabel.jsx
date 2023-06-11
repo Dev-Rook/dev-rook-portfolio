@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import "../styles/global.scss";
 import styles from "../styles/comp-styles/errorLabel.module.scss";
 
+// Hooks Import:
+import useScrollUp from "../hooks/useScrollUp";
+
 import StartIcon from "@mui/icons-material/Start";
 
 const DevLabel = () => {
+  const { scrollUp } = useScrollUp();
   return (
     <div className={"section"}>
       <div className={styles.Content_Container}>
@@ -18,7 +22,7 @@ const DevLabel = () => {
         </p>
         <div className={styles.CallToActionBox}>
           <Link to={"/"}>
-            <button className={styles.View_Button}>Home</button>
+            <button onClick={scrollUp} className={styles.View_Button}>Home</button>
           </Link>
           <StartIcon
             sx={{ color: "red", fontSize: 25 }}
