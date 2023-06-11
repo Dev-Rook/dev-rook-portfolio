@@ -48,7 +48,7 @@ const Bio = () => {
         </div>
       </div>
       <div className={"CallToActionBox"}>
-        <Link to={"/profile"} onClick={scrollUp}>
+        <Link to={"/dev"} onClick={scrollUp}>
           <button className={"Button"}>About Me</button>
         </Link>
         <StartIcon sx={{ color: "white", fontSize: 25 }} />
