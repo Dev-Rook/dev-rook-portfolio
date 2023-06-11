@@ -13,9 +13,10 @@ import ContactForm from "../components/ContactForm"
 
 const Index = () => {
   const title = "Developer Rook"
+  const subtitle = "Fullstack Developer"
   return (
     <div className='page'>
-      <Hero title={title} />
+      <Hero title={title} subtitle={subtitle} />
       <Bio />
       <Work />
       {/* <Tech /> */}
