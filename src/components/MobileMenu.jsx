@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Styles Import:
@@ -7,7 +7,7 @@ import styles from "../styles/comp-styles/mobileMenu.module.scss";
 // Json Import:
 import routes from "../data/routes.json";
 
-const MobileMenu = ({ reveal, scrollUp }) => {
+const MobileMenu = ({ reveal, scrollUp, isOpen }) => {
   const [data, setData] = useState(routes);
 
   return (

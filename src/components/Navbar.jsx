@@ -16,6 +16,18 @@ const Navbar = () => {
   const [data, setData] = useState(routes);
   const [reveal, setReveal] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleScrollLock = () => {
+    const body = document.querySelector('body');
+    body.classList.toggle('no-scroll');
+  };
+
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+    toggleScrollLock();
+  };
 
   const { scrollUp } = useScrollUp();
 
@@ -37,6 +49,7 @@ const Navbar = () => {
 
   const revealMenu = () => {
     setReveal((prev) => !prev);
+    handleMenuToggle()
   };
 
   return (
@@ -61,7 +74,7 @@ const Navbar = () => {
         <div ref={menuRef} onClick={revealMenu} className={styles.imgContainer}>
           <img src="" alt="" className={styles.img} />
         </div>
-        <MobileMenu reveal={reveal} setReveal={setReveal} scrollUp={scrollUp} />
+        <MobileMenu reveal={reveal} setReveal={setReveal} scrollUp={scrollUp} isOpen={isOpen} />
       </div>
     </nav>
   );
