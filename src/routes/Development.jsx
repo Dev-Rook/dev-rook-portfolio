@@ -1,8 +1,13 @@
-import React from 'react'
+// Styles Import:
+import  "../styles/global.scss";
+
+import DevLabel from "../components/DevLabel"
 
 const Development = () => {
   return (
-    <div>Development</div>
+    <div className="utilityPage">
+      <DevLabel />
+    </div>
   )
 }
 

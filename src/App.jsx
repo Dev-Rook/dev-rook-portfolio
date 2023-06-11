@@ -17,6 +17,7 @@ import Index from "./routes/Index.jsx";
 import Projects from "./routes/Projects";
 import Profile from "./routes/Profile";
 import Posts from "./routes/Posts";
+import Development from "./routes/Development";
 import Error from "./routes/Error";
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/dev" element={<Development />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

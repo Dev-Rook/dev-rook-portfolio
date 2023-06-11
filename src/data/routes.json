@@ -7,7 +7,7 @@
     {
         "id": 2,
         "name": "About",
-        "route": "/about"
+        "route": "/dev"
     },
     {
         "id": 3,
