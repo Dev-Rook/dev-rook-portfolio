@@ -10,6 +10,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 
 // Component Imports:
 import Navbar from "./components/Navbar";
+import MobileMenu from "./components/MobileMenu.jsx";
 import Footer from "./components/Footer";
 
 // Route Imports:

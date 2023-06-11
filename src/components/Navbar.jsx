@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import useScrollUp from "../hooks/useScrollUp";
 
 // Styles Import:
 import styles from "../styles/comp-styles/nav.module.scss";
@@ -7,8 +9,36 @@ import styles from "../styles/comp-styles/nav.module.scss";
 // Json Import:
 import routes from "../data/routes.json";
 
+// Component Import:
+import MobileMenu from "./MobileMenu";
+
 const Navbar = () => {
   const [data, setData] = useState(routes);
+  const [reveal, setReveal] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const { scrollUp } = useScrollUp();
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setReveal(false);
+        setClicked(false);
+      }
+    };
+
+    document.addEventListener("mousedown", closeMenu);
+    return () => {
+      document.removeEventListener("mousedown", closeMenu);
+    };
+  });
+
+  const revealMenu = () => {
+    setReveal((prev) => !prev);
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.left}></div>
@@ -17,16 +47,21 @@ const Navbar = () => {
           {data?.map((item) => {
             return (
               <li key={item.id}>
-                <Link to={item.route} className={styles.link}>
+                <Link
+                  to={item.route}
+                  onClick={scrollUp}
+                  className={styles.link}
+                >
                   {item.name}
                 </Link>
               </li>
             );
           })}
         </ul>
-        <div className={styles.imgContainer}>
+        <div ref={menuRef} onClick={revealMenu} className={styles.imgContainer}>
           <img src="" alt="" className={styles.img} />
         </div>
+        <MobileMenu reveal={reveal} setReveal={setReveal} scrollUp={scrollUp} />
       </div>
     </nav>
   );

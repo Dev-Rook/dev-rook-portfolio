@@ -49,6 +49,7 @@
     .imgContainer {
       display: flex;
       cursor: pointer;
+      z-index: 110;
       overflow: hidden;
       height: 40px;
       width: 40px;
