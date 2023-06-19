@@ -71,10 +71,10 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div ref={menuRef} onClick={revealMenu} className={styles.imgContainer}>
+        <div  onClick={revealMenu} className={styles.imgContainer}>
           <img src="" alt="" className={styles.img} />
         </div>
-        <MobileMenu reveal={reveal} setReveal={setReveal} scrollUp={scrollUp} isOpen={isOpen} />
+        <MobileMenu revealMenu={revealMenu} menuRef={menuRef} reveal={reveal} setReveal={setReveal} scrollUp={scrollUp} isOpen={isOpen} />
       </div>
     </nav>
   );

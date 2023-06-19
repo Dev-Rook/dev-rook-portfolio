@@ -15,7 +15,7 @@
 
   border: 1px solid white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgba(36, 36, 36, 0.9);
+  background-color: rgba(36, 36, 36, 1);
   backdrop-filter: blur(5px);
 
   .linksContainer {
@@ -30,7 +30,7 @@
     height: 300px;
     width: 100%;
 
-    border: 1px solid red;
+    // border: 1px solid red;
 
     .link {
       cursor: pointer;
