@@ -16,7 +16,7 @@
     },
     {
         "id": 4,
-        "Icon": "https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Icons/Html-Icon.png?raw=true",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/nodejs.png?raw=true",
         "Title": "Node Js"
     },
     {
@@ -26,17 +26,17 @@
     },
     {
         "id": 6,
-        "Icon": "https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Icons/Sass-Icon.png?raw=true",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/firebase.png?raw=true",
         "Title": "Firebase"
     },
     {
         "id": 7,
-        "Icon": "https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Icons/MaterialUI-Logo.png?raw=true",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/postman.png?raw=true",
         "Title": "Postman"
     },
     {
         "id": 8,
-        "Icon": "https://github.com/Dev-Rook/minimal-portfolio/blob/main/src/Assets/Icons/Bootstrap-Icon.png?raw=true",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/chatgpt(1).png?raw=true",
         "Title": "ChatGPT"
     },
     {
