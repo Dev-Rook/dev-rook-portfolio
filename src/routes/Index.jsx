@@ -18,8 +18,8 @@ const Index = () => {
     <div className='page'>
       <Hero title={title} subtitle={subtitle} />
       <Bio />
+      <Tech />
       <Work />
-      {/* <Tech /> */}
       <Experience />
       <Posts />
       <ContactForm />
