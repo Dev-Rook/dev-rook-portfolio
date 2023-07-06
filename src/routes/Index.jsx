@@ -7,6 +7,7 @@ import Intro from "../sections/Intro";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Posts from "../sections/Posts";
+import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   const title = "Developer Rook";
@@ -18,6 +19,7 @@ const Index = () => {
     <Skills />
     <Outlet />
     <Posts />
+    <ContactForm />
   </div>;
 };
 

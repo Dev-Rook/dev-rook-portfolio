@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
 // Styles Import:
-import styles from "../styles/comp-styles/contactForm.module.scss";
+import styles from "../styles/comps/contactForm.module.scss";
 
 // Component Import:
 const ContactForm = () => {

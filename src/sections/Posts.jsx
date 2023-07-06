@@ -56,7 +56,7 @@ const Posts = () => {
           return (
             <>
               <SwiperSlide className={styles.slide} key={value.id}>
-                <Link to={`/project/${value.id}`} className={styles.link}>
+                <Link to={value.link} className={styles.link}>
                   <div className={styles.icon}></div>
                   <div className={styles.imgContainer}>
                     <img src={value.preview} alt="" className={styles.img} />
