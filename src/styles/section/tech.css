@@ -92,9 +92,9 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .Title {
+  /* .Title {
     font-size: 35px;
-  }
+  } */
   .Description {
     font-size: 15px;
   }
