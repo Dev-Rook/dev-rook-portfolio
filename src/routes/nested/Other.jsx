@@ -1,19 +1,20 @@
 import { useState } from "react";
 
 // Styles Import:
-import styles from "../styles/sec-styles/tech.module.scss";
-// Json Import:
-import tech from "../data/tech.json";
+import styles from "../../styles/section/tech.module.scss";
 
-const Tech = () => {
+// Json Import:
+import tech from "../../data/tech.json";
+
+const Other = () => {
   const [data] = useState(tech);
+  const filteredItems = data.filter((item) => item.type === "other");
   return (
-    <div className="section">
-        <p className="sectionTitle">Tech Stack</p>
+    <div className="section_skill">
       <div className={styles.Content_Container}>
         <div className={styles.Technolgies_Container}>
           <div className={styles.Tech_Grid}>
-            {data?.map((value, i) => {
+            {filteredItems?.map((value, i) => {
               return (
                 <div className={styles.Card} key={i}>
                   <img src={value.Icon} alt="Icon" className={styles.Icon} />
@@ -28,4 +29,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default Other;

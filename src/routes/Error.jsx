@@ -1,6 +1,3 @@
-// Styles Import:
-import  "../styles/global.scss";
-
 import ErrorLabel from "../components/ErrorLabel";
 
 const Error = () => {

@@ -1,6 +1,3 @@
-// Styles Import:
-import  "../styles/global.scss";
-
 import DevLabel from "../components/DevLabel"
 
 const Development = () => {

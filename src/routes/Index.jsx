@@ -1,30 +1,22 @@
-
-// Styles Import:
-import "../styles/global.scss"
-
+import { Outlet } from "react-router-dom";
 // Components Import:
-import Hero from "../components/Hero"
-import Bio from "../sections/Bio"
-import Tech from "../sections/Tech"
-import Work from "../sections/Work"
-import Experience from "../sections/Experience"
-import Posts from "../sections/Posts"
-import ContactForm from "../components/ContactForm"
+
+// Section Import:
+import Hero from "../sections/Hero";
+import Intro from "../sections/Intro";
+import Projects from "../sections/Projects";
+import Skills from "../sections/Skills";
 
 const Index = () => {
-  const title = "Developer Rook"
-  const subtitle = "Fullstack Developer"
-  return (
-    <div className='page'>
-      <Hero title={title} subtitle={subtitle} />
-      <Bio />
-      <Tech />
-      <Work />
-      <Experience />
-      <Posts />
-      <ContactForm />
-    </div>
-  )
-}
+  const title = "Developer Rook";
+  const subtitle = "Fullstack Developer";
+  return <div className="page">
+    <Hero />
+    <Intro />
+    <Projects />
+    <Skills />
+    <Outlet />
+  </div>;
+};
 
-export default Index
+export default Index;

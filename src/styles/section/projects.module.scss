@@ -1,4 +1,4 @@
-.contentCotainer {
+.project_Grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 20px;
@@ -18,8 +18,9 @@
 
     gap: 8px;
     // cursor: pointer;
+    transition: .5s ease-in-out;
 
-    // margin: auto;
+    margin: auto;
 
     height: fit-content;
     width: 300px;
@@ -93,19 +94,56 @@
 }
 
 @media only screen and (max-width: 996px) {
-  .contentCotainer {
+  .project_Grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     .card {
       width: 100%;
+      .imgContainer {
+        height: 200px;
+        width: 100%;
+      }
     }
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .contentCotainer {
+@media only screen and (max-width: 590px) {
+  .project_Grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     .card {
+      width: 100%;
       .imgContainer {
         height: 200px;
+        width: 100%;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .project_Grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .card {
+      width: 100%;
+      .imgContainer {
+        height: 200px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .project_Grid {
+    .card {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .project_Grid {
+    .card {
+      width: 100%;
     }
   }
 }

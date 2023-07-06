@@ -2,33 +2,38 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Styles Import:
-import styles from "../styles/comp-styles/mobileMenu.module.scss";
+import styles from "../styles/comps/mobileMenu.module.scss";
 
 // Json Import:
-import routes from "../data/routes.json";
+import routeData from "../data/routes";
 
-const MobileMenu = ({ reveal, scrollUp, isOpen, menuRef, revealMenu }) => {
-  const [data, setData] = useState(routes);
-
-  const doubleFunc = () => {
-    revealMenu()
-    scrollUp()
-  }
+const MobileMenu = ({ show, toggleMobileMenu, auth }) => {
+  const [routes, setRoutes] = useState(routeData);
 
   return (
-    <div ref={menuRef} className={`${styles.mobileMenu} ${reveal ? styles.reveal : ""}`}>
-      <ul className={styles.linksContainer}>
-        {data?.map((item) => {
-          return (
-            <li key={item.id}>
-              <Link to={item.route} onClick={doubleFunc} className={styles.link}>
-                {item.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <nav className={`${styles.mobile_menu} ${show ? styles.reveal : ""}`}>
+      {auth ? (
+        <ul className={styles.mobile_navlink_container}>
+          {routes?.map((route) => {
+            return (
+              <li key={route.id} onClick={toggleMobileMenu}>
+                <Link to={route.route} className={styles.link}>
+                  {route?.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <Link
+          onClick={toggleMobileMenu}
+          to="/login"
+          className={styles.login_button}
+        >
+          <button>Login</button>
+        </Link>
+      )}
+    </nav>
   );
 };
 

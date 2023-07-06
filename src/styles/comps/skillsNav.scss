@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+  padding: 5px;
+
+  .link {
+    color: black;
+    position: relative;
+  }
+
+  .link::after {
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    opacity: 0;
+  }
+
+  .link:active::after, .link:hover::after {
+    opacity: 1;
+  }
+}

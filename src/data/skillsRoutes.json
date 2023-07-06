@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Frontend",
+      "route": "/"
+    },
+    {
+      "id": 2,
+      "name": "Backend",
+      "route": "/backend"
+    },
+    {
+      "id": 2,
+      "name": "Other",
+      "route": "/other"
+    }
+  ]
+  

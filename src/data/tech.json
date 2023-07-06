@@ -2,46 +2,91 @@
     {
         "id": 1,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/mongodb.png?raw=true",
-        "Title": "MongoDb"
+        "Title": "MongoDb",
+        "type": "backend"
     },
     {
         "id": 2,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/express.png?raw=true",
-        "Title": "Express JS"
+        "Title": "Express JS",
+        "type": "backend"
     },
     {
         "id": 3,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/reactjs.png?raw=true",
-        "Title": "React JS"
+        "Title": "React JS",
+        "type": "frontend"
     },
     {
         "id": 4,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/nodejs.png?raw=true",
-        "Title": "Node Js"
+        "Title": "Node Js",
+        "type": "backend"
     },
     {
         "id": 5,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/github.png?raw=true",
-        "Title": "GitHub"
+        "Title": "GitHub",
+        "type": "other"
     },
     {
         "id": 6,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/firebase.png?raw=true",
-        "Title": "Firebase"
+        "Title": "Firebase",
+        "type": "backend"
     },
     {
         "id": 7,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/postman.png?raw=true",
-        "Title": "Postman"
+        "Title": "Postman",
+        "type": "backend"
     },
     {
         "id": 8,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/chatgpt(1).png?raw=true",
-        "Title": "ChatGPT"
+        "Title": "ChatGPT",
+        "type": "other"
     },
     {
         "id": 9,
         "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/rapidApi.png?raw=true",
-        "Title": "Rapid API"
+        "Title": "Rapid API",
+        "type": "backend"
+    },
+    {
+        "id": 10,
+        "Icon": "",
+        "Title": "Html",
+        "type": "frontend"
+    },
+    {
+        "id": 11,
+        "Icon": "",
+        "Title": "Css",
+        "type": "frontend"
+    },
+    {
+        "id": 12,
+        "Icon": "",
+        "Title": "Scss",
+        "type": "frontend"
+    },
+    {
+        "id": 13,
+        "Icon": "",
+        "Title": "Material UI",
+        "type": "frontend"
+    },
+    {
+        "id": 14,
+        "Icon": "",
+        "Title": "Astro",
+        "type": "frontend"
+    },
+    {
+        "id": 15,
+        "Icon": "",
+        "Title": "Figma",
+        "type": "other"
     }
 ]
