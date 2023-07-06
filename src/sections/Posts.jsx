@@ -29,7 +29,7 @@ const Posts = () => {
         spaceBetween={10}
         // loop={true}
         autoplay={{
-          delay: 3000
+          delay: 3000,
         }}
         grabCursor={true}
         modules={[Navigation, FreeMode, Autoplay, Mousewheel, Pagination]}
@@ -54,18 +54,16 @@ const Posts = () => {
       >
         {posts?.map((value) => {
           return (
-            <>
-              <SwiperSlide className={styles.slide} key={value.id}>
-                <Link to={value.link} className={styles.link}>
-                  <div className={styles.icon}></div>
-                  <div className={styles.imgContainer}>
-                    <img src={value.preview} alt="" className={styles.img} />
-                  </div>
-                  <div className={styles.diffuser}></div>
+            <SwiperSlide className={styles.slide} key={value.id}>
+              <Link to={value.link} className={styles.link}>
+                <div className={styles.icon}></div>
+                <div className={styles.imgContainer}>
+                  <img src={value.preview} alt="" className={styles.img} />
+                </div>
+                <div className={styles.diffuser}></div>
                 <p className={styles.title}>{value.title}</p>
-                </Link>
-              </SwiperSlide>
-            </>
+              </Link>
+            </SwiperSlide>
           );
         })}
       </Swiper>

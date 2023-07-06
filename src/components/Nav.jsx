@@ -53,7 +53,7 @@ const Nav = () => {
       <ul className={styles.left}>
         {social?.map((value) => {
           return (
-            <a href={value.link} target="_blank" rel="noreferror">
+            <a href={value.link} target="_blank" rel="noreferror" key={value.id}>
               <div className={styles.iconContainer}>
                 <img src={value.image} alt="" className={styles.icon} />
               </div>

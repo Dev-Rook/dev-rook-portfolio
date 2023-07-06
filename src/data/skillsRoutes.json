@@ -10,7 +10,7 @@
       "route": "/backend"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Other",
       "route": "/other"
     }

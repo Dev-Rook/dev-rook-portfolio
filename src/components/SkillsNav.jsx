@@ -12,7 +12,7 @@ const SkillsNav = () => {
   return (
     <div className="nav">
       {routes?.map((item) => {
-        return <Link to={item.route} className="link">{item.name}</Link>;
+        return <Link to={item.route} key={item.id} className="link">{item.name}</Link>;
       })}
     </div>
   );

@@ -16,7 +16,7 @@ const Other = () => {
           <div className={"Tech_Grid"}>
             {filteredItems?.map((value, i) => {
               return (
-                <div className={"Card"} key={i}>
+                <div className={"Card"} key={value.id}>
                   <img src={value.Icon} alt="Icon" className={"Icon"} />
                   <p className={"Title"}>{value.Title}</p>
                 </div>
