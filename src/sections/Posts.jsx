@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Styles Import:
 import styles from "../styles/section/postSwiper.module.scss";
@@ -17,24 +17,21 @@ import "swiper/css/scrollbar";
 // import "swiper/css/effect-fade ";
 
 // Json Import:
-import postData from "../data/posts.json"
+import postData from "../data/posts.json";
 
 const Posts = () => {
-    const [posts, setPosts] = useState(postData)
+  const [posts, setPosts] = useState(postData);
   return (
     <div className="section">
-      <p className="sectionTitle">Projects</p>
+      <p className="sectionTitle">Posts</p>
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
+        // loop={true}
         autoplay={{
           delay: 3000
         }}
-        loop={true}
         grabCursor={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
         modules={[Navigation, FreeMode, Autoplay, Mousewheel, Pagination]}
         className={styles.swiper}
         breakpoints={{
@@ -57,21 +54,23 @@ const Posts = () => {
       >
         {posts?.map((value) => {
           return (
-            <SwiperSlide className={styles.slide} key={value.id}>
-              <Link to={`/project/${value.id}`} className={styles.link}>
-                <div className={styles.icon}></div>
-                <div className={styles.imgContainer}>
-                  <img src="" alt="" className={styles.img} />
-                </div>
-                <div className={styles.diffuser}></div>
+            <>
+              <SwiperSlide className={styles.slide} key={value.id}>
+                <Link to={`/project/${value.id}`} className={styles.link}>
+                  <div className={styles.icon}></div>
+                  <div className={styles.imgContainer}>
+                    <img src={value.preview} alt="" className={styles.img} />
+                  </div>
+                  <div className={styles.diffuser}></div>
                 <p className={styles.title}>{value.title}</p>
-              </Link>
-            </SwiperSlide>
+                </Link>
+              </SwiperSlide>
+            </>
           );
         })}
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default Posts
+export default Posts;

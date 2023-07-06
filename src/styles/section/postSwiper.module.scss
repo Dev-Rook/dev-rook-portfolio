@@ -1,5 +1,6 @@
 .swiper {
   display: flex;
+  flex-direction: column;
 
   justify-content: center;
   align-items: center;
@@ -53,6 +54,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 1;
 
       height: 100%;
       width: 100%;
@@ -69,17 +71,21 @@
       position: absolute;
 
       z-index: 2;
-
+      
       height: 100%;
       width: 100%;
-
+      
       background-color: rgba(0, 0, 0, 0.2);
     }
-
+    
     .title {
       position: absolute;
+      z-index: 4;
       bottom: 5px;
       left: 5px;
     }
   }
 }
+
+
+
