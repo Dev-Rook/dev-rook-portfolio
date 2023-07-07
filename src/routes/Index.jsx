@@ -7,6 +7,7 @@ import Intro from "../sections/Intro";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Posts from "../sections/Posts";
+import Contact from "../sections/Contact";
 import ContactForm from "../components/ContactForm";
 
 const Index = () => {
@@ -19,7 +20,7 @@ const Index = () => {
     <Skills />
     <Outlet />
     <Posts />
-    <ContactForm />
+    <Contact /> 
   </div>;
 };
 

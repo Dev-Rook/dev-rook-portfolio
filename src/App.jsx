@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Comnponents Import:
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 // Route Imports:
 import Index from "./routes/Index.jsx";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="other" element={<Other />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

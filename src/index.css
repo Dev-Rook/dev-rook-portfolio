@@ -103,6 +103,25 @@ body {
   width: 1000px;
 }
 
+.section_contact {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 5px;
+  gap: 10px;
+  overflow-x: none;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  height: fit-content;
+  width: 1000px;
+}
+
 .section_skill {
   display: flex;
   flex-direction: column;
@@ -180,12 +199,15 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-  .section, .section_skill {
+  .section, .section_skill, .section_contact {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 590px) {
+  .section_contact {
+    flex-direction: column;
+  }
   .grid {
     grid-template-columns: 1fr 1fr;
   }

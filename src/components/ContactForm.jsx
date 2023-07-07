@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import styles from "../styles/comps/contactForm.module.scss";
 
 // Component Import:
+import ContactBanner from "./ContactBanner";
+
+
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,7 +16,7 @@ const ContactForm = () => {
 
   return (
     <div className={"section"} id="contactFrom">
-      <p className={"sectionTitle"}>Contact</p>
+      {/* <p className={"sectionTitle"}>Contact</p> */}
       <form ref={form} method="POST" className={styles.Contact_Form}>
         <input
           type="text"

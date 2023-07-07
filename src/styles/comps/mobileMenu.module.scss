@@ -18,10 +18,13 @@
   height: 100vh;
   width: 350px;
 
-  border: 1px solid white;
+  border: 1px solid black;
+  background-color: white;
   background-color: rgba(0, 0, 0, 0.9);
   // background-color: rgb(23, 42, 54);
   backdrop-filter: blur(5px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   .mobile_navlink_container {
     display: flex;
@@ -37,6 +40,7 @@
 
     .link {
       font-size: 20px;
+      color: white;
     }
   }
 
