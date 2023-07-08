@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 // Hooks Import:
 import useWindowWidth from "../hooks/useWindowWidth";
+import useWindowHeight from "../hooks/useWindowHeight";
 
 // Styles Import:
 import styles from "../styles/comps/nav.module.scss";
 
 // Json Import:
 import routeData from "../data/routes";
-import socialData from "../data/social.json"
+import socialData from "../data/social.json";
 
 // Component Import:
 import MobileMenu from "./MobileMenu";
@@ -21,9 +22,11 @@ const Nav = () => {
   const [auth, setAuth] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [iconColor, setIconColor] = useState();
 
   // Hooks
   const { windowWidth } = useWindowWidth();
+  const { windowHeight } = useWindowHeight();
   // const { scrollUp } = useScrollUp();
 
   let menuRef = useRef();
@@ -42,6 +45,16 @@ const Nav = () => {
     };
   });
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 755) {
+        setIconColor("black");
+      } else {
+        setIconColor("white");
+      }
+    });
+  }, []);
+
   const toggleMobileMenu = () => {
     setShow((prev) => !prev);
   };
@@ -53,12 +66,17 @@ const Nav = () => {
       <ul className={styles.left}>
         {social?.map((value) => {
           return (
-            <a href={value.link} target="_blank" rel="noreferror" key={value.id}>
+            <a
+              href={value.link}
+              target="_blank"
+              rel="noreferror"
+              key={value.id}
+            >
               <div className={styles.iconContainer}>
                 <img src={value.image} alt="" className={styles.icon} />
               </div>
             </a>
-          )
+          );
         })}
       </ul>
       <div className={styles.right}>
@@ -75,16 +93,16 @@ const Nav = () => {
         ) : (
           <>{windowWidth <= 996 ? null : <Link to="/login">Login</Link>}</>
         )}
-        <svg
-          onClick={toggleMobileMenu}
-          className={styles.profile_icon}
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <path fill="white" d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
-        </svg>
+          <svg
+            onClick={toggleMobileMenu}
+            className={styles.profile_icon}
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path fill={iconColor} d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
+          </svg>
       </div>
 
       <MobileMenu show={show} toggleMobileMenu={toggleMobileMenu} auth={auth} />

@@ -1,4 +1,7 @@
 import { Outlet } from "react-router-dom";
+// Utilities Import:
+import { TabTitle } from "../utilities/TabTitle";
+
 // Components Import:
 
 // Section Import:
@@ -11,17 +14,20 @@ import Contact from "../sections/Contact";
 import ContactForm from "../components/ContactForm";
 
 const Index = () => {
+  TabTitle("Dev Rook 🚀 | Home");
   const title = "Developer Rook";
   const subtitle = "Fullstack Developer";
-  return <div className="page">
-    <Hero />
-    <Intro />
-    <Projects />
-    <Skills />
-    <Outlet />
-    <Posts />
-    <Contact /> 
-  </div>;
+  return (
+    <div className="page">
+      <Hero />
+      <Intro />
+      <Projects />
+      <Skills />
+      <Outlet />
+      <Posts />
+      <Contact />
+    </div>
+  );
 };
 
 export default Index;
