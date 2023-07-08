@@ -59,8 +59,6 @@ const Nav = () => {
     setShow((prev) => !prev);
   };
 
-  const profileLink = `https://i.pinimg.com/564x/2e/bf/3f/2ebf3fedb20aaf0235ba11a69e34f7fe.jpg`;
-
   return (
     <nav ref={menuRef} className={styles.nav}>
       <ul className={styles.left}>
