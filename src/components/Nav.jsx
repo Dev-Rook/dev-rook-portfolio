@@ -47,7 +47,7 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 755) {
+      if (window.scrollY > 80 * window.innerHeight / 100) {
         setIconColor("black");
       } else {
         setIconColor("white");
