@@ -18,7 +18,7 @@ import MobileMenu from "./MobileMenu";
 const Nav = () => {
   const [routes, setRoutes] = useState(routeData);
   const [social, setSocial] = useState(socialData);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [auth, setAuth] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 80 * window.innerHeight / 100) {
+      if (window.scrollY > (80 * window.innerHeight) / 100) {
         setIconColor("black");
       } else {
         setIconColor("white");
@@ -91,16 +91,16 @@ const Nav = () => {
         ) : (
           <>{windowWidth <= 996 ? null : <Link to="/login">Login</Link>}</>
         )}
-          <svg
-            onClick={toggleMobileMenu}
-            className={styles.profile_icon}
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-          >
-            <path fill={iconColor} d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
-          </svg>
+        <svg
+          onClick={toggleMobileMenu}
+          className={styles.profile_icon}
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path fill={iconColor} d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z" />
+        </svg>
       </div>
 
       <MobileMenu show={show} toggleMobileMenu={toggleMobileMenu} auth={auth} />
