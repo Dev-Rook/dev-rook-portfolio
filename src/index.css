@@ -110,13 +110,7 @@ body {
   align-items: center;
 
   overflow: hidden;
-
-  padding: 5px;
-  gap: 10px;
   overflow-x: none;
-
-  padding-top: 30px;
-  padding-bottom: 30px;
 
   height: fit-content;
   width: 1000px;

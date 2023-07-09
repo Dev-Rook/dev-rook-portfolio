@@ -1,26 +1,20 @@
 [
     {
         "id": 1,
-        "name": "GitHub",
-        "image": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/github.png?raw=true",
-        "link": "https://github.com/Dev-Rook"
-    },
-    {
-        "id": 2,
         "name": "LinkedIn",
         "image": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/linkedin.png?raw=true",
         "link": "https://www.linkedin.com/in/dev-rook/"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Twitter",
         "image": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/twitter.png?raw=true",
         "link": "https://twitter.com/Dev_Rook"
     },
     {
         "id": 4,
-        "name": "YouTube",
+        "name": "Gmail",
         "image": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/youtube.png?raw=true",
-        "link": "https://www.youtube.com/@developerrook97/about"
+        "link": "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVJXkKlBvRxHWZSTTjtgbfBHbvfXzPtJnFPWlsjNzGqCsMnRtFHqWRFLRCZxLBCppRPHxL"
     }
 ]
