@@ -1,4 +1,4 @@
-import styles from "../styles/comp-styles/input.module.scss";
+import styles from "../styles/comps/input.module.scss";
 
 // Material UI Import:
 import SearchIcon from "@mui/icons-material/Search";

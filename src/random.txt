@@ -1,0 +1,46 @@
+      {filteredData.length > 0 ? (
+        <div className={styles.contentCotainer}>
+          <>
+            {filteredData?.slice(0, 10).map((value) => {
+              return (
+                <>
+                  {loading ? (
+                    <ScaleLoader
+                      color={"red"}
+                      loading={loading}
+                      cssOverride={override}
+                      size={80}
+                      aria-label="Loading Spinner"
+                      data-testid="loader"
+                    />
+                  ) : error ? (
+                    <p>{error}</p>
+                  ) : (
+                    <div className={styles.card} key={value.id}>
+                      <div className={styles.actionBox}>
+                        <AddBoxIcon sx={{ fontSize: 30, color: "red" }} />
+                        <Link to={`/product/${value.id}`}>
+                          <VisibilityIcon
+                            sx={{ fontSize: 30, color: "black" }}
+                          />
+                        </Link>
+                      </div>
+                      <div className={styles.imgContainer}>
+                        <img
+                          src={value.image}
+                          alt="Under Development"
+                          className={styles.img}
+                        />
+                      </div>
+                      <p className={styles.text}>{value.title.slice(0, 30)}</p>
+                      <p className={styles.text}>${value.price}</p>
+                    </div>
+                  )}
+                </>
+              );
+            })}
+          </>
+        </div>
+      ) : (
+        <>{!loading && <p>Doesnt Exist</p> }</>
+      )}
