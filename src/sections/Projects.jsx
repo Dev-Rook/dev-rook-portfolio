@@ -13,7 +13,7 @@ const Projects = () => {
     <div className="section">
       <p className="sectionTitle">Projects</p>
       <div className={styles.project_Grid}>
-        {projects?.map((value) => {
+        {projects?.slice(0, 3).map((value) => {
           return (
             <div className={styles.card} key={value.id}>
               <div className={styles.imgContainer}>
