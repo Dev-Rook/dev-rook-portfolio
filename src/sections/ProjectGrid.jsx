@@ -12,15 +12,11 @@ import styles from "../styles/section/projectGrid.module.scss";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 // Material UI Imports:
-import StartIcon from "@mui/icons-material/Start";
+import LaunchIcon from "@mui/icons-material/Launch";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import AddBoxIcon from "@mui/icons-material/AddBox";
 
 // Components Import:
 import Input from "../components/Input";
-
-// Json Import:
-import projectData from "../data/work.json";
 
 const ProjectGrid = () => {
   const table = `projects`;
@@ -56,12 +52,6 @@ const ProjectGrid = () => {
         {data?.map((value) => {
           return (
             <div className={styles.card} key={value.id}>
-              <div className={styles.actionBox}>
-                <AddBoxIcon sx={{ fontSize: 30, color: "red" }} />
-                <Link to={`/project/${value.title}`}>
-                  <VisibilityIcon sx={{ fontSize: 30, color: "black" }} />
-                </Link>
-              </div>
               <div className={styles.imgContainer}>
                 <img
                   src={value.image}
@@ -69,8 +59,24 @@ const ProjectGrid = () => {
                   className={styles.img}
                 />
               </div>
-              <p className={styles.text}>{value.name}</p>
-              {/* <p className={styles.text}>{value.description}</p> */}
+              <div className={styles.info_Container}>
+                <p className={styles.title}>{value.name}</p>
+                <p className={styles.description}>{value.description}</p>
+              </div>
+              <div className={styles.action_container}>
+                <p className={styles.type}>{value.type}</p>
+
+                <div className={styles.actions}>
+                  <Link to={`/project/${value.id}`}>
+                    <VisibilityIcon
+                      sx={{ color: "white", cursor: "pointer" }}
+                    />
+                  </Link>
+                  <Link to={value.demoLink}>
+                    <LaunchIcon sx={{ color: "white", cursor: "pointer" }} />
+                  </Link>
+                </div>
+              </div>
             </div>
           );
         })}
