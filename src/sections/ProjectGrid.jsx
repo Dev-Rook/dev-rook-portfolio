@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // Hooks Imports:
 import useAxios from "../hooks/useAxios";
-// import useFirebase from "../hooks/useFirebase";
+import useFirebase from "../hooks/useFirebase";
 
 // Styles Import:
 import styles from "../styles/section/projectGrid.module.scss";
@@ -23,15 +23,13 @@ import Input from "../components/Input";
 import projectData from "../data/work.json";
 
 const ProjectGrid = () => {
-  const url = `https://fakestoreapi.com/products`;
-  // const url = `https://dummyjson.com/products`;
-  // const { data, loading, error } = useAxios(url);
-  const [data, setData] = useState(projectData);
+  const table = `projects`;
+  const { data, loading, error } = useFirebase(table);
   const [search, setSearch] = useState("");
 
   const filteredData = data.filter(
     (item) =>
-      item.title.toLowerCase().includes(search.toLowerCase()) ||
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
       item.description.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -66,12 +64,12 @@ const ProjectGrid = () => {
               </div>
               <div className={styles.imgContainer}>
                 <img
-                  src={value.preview}
+                  src={value.image}
                   alt="Under Development"
                   className={styles.img}
                 />
               </div>
-              <p className={styles.text}>{value.title}</p>
+              <p className={styles.text}>{value.name}</p>
               {/* <p className={styles.text}>{value.description}</p> */}
             </div>
           );
