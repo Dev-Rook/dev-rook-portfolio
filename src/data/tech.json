@@ -55,38 +55,44 @@
     },
     {
         "id": 10,
-        "Icon": "",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/html.png?raw=true",
         "Title": "Html",
         "type": "frontend"
     },
     {
         "id": 11,
-        "Icon": "",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/css.png?raw=true",
         "Title": "Css",
         "type": "frontend"
     },
     {
         "id": 12,
-        "Icon": "",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/sass.png?raw=true",
         "Title": "Scss",
         "type": "frontend"
     },
     {
         "id": 13,
-        "Icon": "",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/material_ui.png?raw=true",
         "Title": "Material UI",
         "type": "frontend"
     },
     {
         "id": 14,
-        "Icon": "",
-        "Title": "Astro",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/Javascript.png?raw=true",
+        "Title": "JavaScript",
         "type": "frontend"
     },
     {
         "id": 15,
-        "Icon": "",
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/figma.png?raw=true",
         "Title": "Figma",
         "type": "other"
+    },
+    {
+        "id": 15,
+        "Icon": "https://github.com/Dev-Rook/dev-rook-portfolio/blob/main/src/assets/icons/typescript.png?raw=true",
+        "Title": "TypeScript",
+        "type": "frontend"
     }
 ]
