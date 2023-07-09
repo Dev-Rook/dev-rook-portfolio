@@ -31,6 +31,7 @@ const Posts = () => {
         autoplay={{
           delay: 3000,
         }}
+        speed={500}
         grabCursor={true}
         modules={[Navigation, FreeMode, Autoplay, Mousewheel, Pagination]}
         className={styles.swiper}
