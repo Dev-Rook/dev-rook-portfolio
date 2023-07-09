@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { TabTitle } from "../utilities/TabTitle";
 
 // Components Import:
+import Nav from "../components/Nav";
 
 // Section Import:
 import Hero from "../sections/Hero";
@@ -15,10 +16,9 @@ import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   TabTitle("Dev Rook 🚀 | Home");
-  const title = "Developer Rook";
-  const subtitle = "Fullstack Developer";
   return (
     <div className="page">
+      <Nav changeHeight={(80 * window.innerHeight) / 100} />
       <Hero />
       <Intro />
       <Projects />

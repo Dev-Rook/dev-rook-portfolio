@@ -15,19 +15,42 @@ import socialData from "../data/social.json";
 // Component Import:
 import MobileMenu from "./MobileMenu";
 
-const Nav = () => {
+const Nav = ({changeHeight}) => {
   const [routes, setRoutes] = useState(routeData);
   const [social, setSocial] = useState(socialData);
   const [show, setShow] = useState(false);
   const [auth, setAuth] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [iconColor, setIconColor] = useState();
+  const [iconColor, setIconColor] = useState("white");
+  // const [changeHeight, setChangeHeight] = useState("");
 
   // Hooks
   const { windowWidth } = useWindowWidth();
   const { windowHeight } = useWindowHeight();
   // const { scrollUp } = useScrollUp();
+
+  // useEffect(() => {
+  //   const path = window.location.pathname;
+  //   let changeHeight;
+
+  //   switch (path) {
+  //     case "/":
+  //       changeHeight = (80 * window.innerHeight) / 100;
+  //       break;
+  //     case "/projects":
+  //       changeHeight = (40 * window.innerHeight) / 100;
+  //       break;
+  //     case "/projects:id":
+  //       changeHeight = (40 * window.innerHeight) / 100;
+  //       break;
+  //     default:
+  //       changeHeight = (80 * window.innerHeight) / 100;
+  //       break;
+  //   }
+
+  //   setChangeHeight(changeHeight);
+  // }, [changeHeight]);
 
   let menuRef = useRef();
 
@@ -47,7 +70,7 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > (80 * window.innerHeight) / 100) {
+      if (window.scrollY > changeHeight) {
         setIconColor("black");
       } else {
         setIconColor("white");
