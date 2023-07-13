@@ -13,10 +13,12 @@ const Projects = () => {
   const subTitle = "Browse my projects";
 
   return (
-    <div className="page">
+    <div className="projects_page">
       <Nav changeHeight={(40 * window.innerHeight) / 100} />
       <Header title={title} subTitle={subTitle} />
-      <ProjectGrid />
+      <ProjectGrid title="Websites" table="projects" type="websites" />
+      <ProjectGrid title="Fullstack" table="projects" type="websites" />
+      <ProjectGrid title="CodeSandbox" table="projects" type="websites" />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Styles Import:
 import styles from "../styles/section/projectSlider.module.scss";
+import headStyles from "../styles/other/projectSectionHead.module.scss";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,10 +20,14 @@ import "swiper/css/scrollbar";
 // Json Import:
 import projectsData from "../data/work.json";
 
-const ProjectSlider = ({data, error, loading, projects}) => {
+const ProjectSlider = ({data, error, loading, projects, title, number}) => {
 //   const [projects, setProjects] = useState(projectsData);
   return (
     <div className="section">
+                  <div className={headStyles.head}>
+            <p className={headStyles.title}>{title}</p>
+            <p className={headStyles.project_number}>{number} Projects</p>
+          </div>
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
