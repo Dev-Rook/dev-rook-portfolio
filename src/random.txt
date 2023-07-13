@@ -44,3 +44,64 @@
       ) : (
         <>{!loading && <p>Doesnt Exist</p> }</>
       )}
+
+      <div className={styles.project_Grid}>
+
+                  <div className={styles.card} key={value.id}>
+              <Link to={value.demoLink}>
+                <div className={styles.imgContainer}>
+                  <img src={value.image} alt="" className={styles.img} />
+                </div>
+              </Link>
+              {value.name}
+            </div>
+      </div>
+
+
+                    <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+      </Grid>
+
+            <Container my="md">
+      <Grid>
+        <Grid.Col xs={4}>{child}</Grid.Col>
+        <Grid.Col xs={8}>{child}</Grid.Col>
+        <Grid.Col xs={8}>{child}</Grid.Col>
+        <Grid.Col xs={4}>{child}</Grid.Col>
+        <Grid.Col xs={3}>{child}</Grid.Col>
+        <Grid.Col xs={3}>{child}</Grid.Col>
+        <Grid.Col xs={6}>{child}</Grid.Col>
+      </Grid>
+    </Container>
+
+          <Container my="md" className={styles.container}>
+        <Grid>
+          <Grid.Col xs={4} className={styles.gridItem}> {child}  </Grid.Col>
+          <Grid.Col xs={8} className={styles.gridItem}> {child}  </Grid.Col>
+          <Grid.Col xs={8} className={styles.gridItem}> {child}  </Grid.Col>
+          <Grid.Col xs={4} className={styles.gridItem}> {child}  </Grid.Col>
+        </Grid>
+      </Container>
+
+
+             <Box sx={{ flexGrow: 1 }} className={styles.container}>
+        <Grid container spacing={2}>
+          {projects?.slice(0, 3).map((value) => {
+            return (
+              <Grid className={styles.gridItem} item xs={value.gridSpan}>
+                {value.name}
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>

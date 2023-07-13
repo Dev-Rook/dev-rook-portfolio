@@ -1,0 +1,94 @@
+.swiper {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+
+  .link {
+    display: flex;
+    position: absolute;
+
+    z-index: 5;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  .slide {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    transition: 0.3s;
+
+    height: 400px;
+    width: 100px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    .icon {
+      display: flex;
+
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      height: 30px;
+      width: 30px;
+
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+
+    .imgContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+
+      .img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .diffuser {
+      display: flex;
+      position: absolute;
+
+      z-index: 2;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .swiper {
+    .slide {
+      height: 300px;
+    }
+  }
+}

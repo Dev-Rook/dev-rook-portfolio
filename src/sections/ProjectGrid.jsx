@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 // Hooks Imports:
 import useAxios from "../hooks/useAxios";
 import useFirebase from "../hooks/useFirebase";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 // Styles Import:
 import styles from "../styles/section/projectGrid.module.scss";
+import "../styles/comps/projectCard.scss";
 
 // Loaders Import:
 import ScaleLoader from "react-spinners/ScaleLoader";
@@ -15,12 +17,18 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import LaunchIcon from "@mui/icons-material/Launch";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
+// Json Import:
+import projectsData from "../data/work.json";
+
 // Components Import:
 import Input from "../components/Input";
+import ProjectSlider from "./ProjectSlider";
 
 const ProjectGrid = () => {
   const table = `projects`;
   const { data, loading, error } = useFirebase(table);
+  const [projects, setProjects] = useState(projectsData);
+  const {windowWidth} = useWindowWidth();
   const [search, setSearch] = useState("");
 
   const filteredData = data.filter(
@@ -39,48 +47,28 @@ const ProjectGrid = () => {
 
   return (
     <div className={"section"} id="">
-      <div className={styles.gridHeader}>
-        {/* <p className={"sectionTitle"}>Project Grid</p> */}
-        <Input
-          setSearch={setSearch}
-          search={search}
-          placeholder={placeholder}
-        />
-      </div>
-
+      <p className="title">Websites</p>
+      {windowWidth >= 580 ? (
       <div className={styles.contentCotainer}>
-        {data?.map((value) => {
+        {projects?.map((value) => {
           return (
-            <div className={styles.card} key={value.id}>
-              <div className={styles.imgContainer}>
-                <img
-                  src={value.image}
-                  alt="Under Development"
-                  className={styles.img}
-                />
-              </div>
-              <div className={styles.info_Container}>
-                <p className={styles.title}>{value.name}</p>
-                <p className={styles.description}>{value.description}</p>
-              </div>
-              <div className={styles.action_container}>
-                <p className={styles.type}>{value.type}</p>
-
-                <div className={styles.actions}>
-                  <Link to={`/project/${value.id}`}>
-                    <VisibilityIcon
-                      sx={{ color: "white", cursor: "pointer" }}
-                    />
-                  </Link>
-                  <Link to={value.demoLink}>
-                    <LaunchIcon sx={{ color: "white", cursor: "pointer" }} />
-                  </Link>
+            <Link to={`/projects/${value.id}`} key={value.id}>
+              <div className="card">
+                <div className="img_container">
+                  <img src={value.image} alt="" className="img" />
+                </div>
+                <div className="info_container">
+                  <p className="title">{value.name}</p>
+                  <p className="description">
+                    {value.description.slice(0, 100)}...
+                  </p>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
+      ) : <ProjectSlider data={data} loading={loading} error={error} projects={projects} /> }
     </div>
   );
 };
