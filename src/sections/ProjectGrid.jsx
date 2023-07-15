@@ -50,7 +50,7 @@ const ProjectGrid = ({title, table, type}) => {
             <p className={headStyles.project_number}>{number} Projects</p>
           </div>
           <div className={styles.contentCotainer}>
-            {projects?.map((value) => {
+            {data?.map((value) => {
               return (
                 <Link to={`/projects/${value.id}`} key={value.id}>
                   <div className="card">
@@ -59,9 +59,9 @@ const ProjectGrid = ({title, table, type}) => {
                     </div>
                     <div className="info_container">
                       <p className="title">{value.name}</p>
-                      <p className="description">
+                      {/* <p className="description">
                         {value.description.slice(0, 100)}...
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </Link>

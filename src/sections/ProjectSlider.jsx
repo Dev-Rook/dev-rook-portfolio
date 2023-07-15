@@ -20,14 +20,14 @@ import "swiper/css/scrollbar";
 // Json Import:
 import projectsData from "../data/work.json";
 
-const ProjectSlider = ({data, error, loading, projects, title, number}) => {
-//   const [projects, setProjects] = useState(projectsData);
+const ProjectSlider = ({ data, error, loading, projects, title, number }) => {
+  //   const [projects, setProjects] = useState(projectsData);
   return (
     <div className="section">
-                  <div className={headStyles.head}>
-            <p className={headStyles.title}>{title}</p>
-            <p className={headStyles.project_number}>{number} Projects</p>
-          </div>
+      <div className={headStyles.head}>
+        <p className={headStyles.title}>{title}</p>
+        <p className={headStyles.project_number}>{number} Projects</p>
+      </div>
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
@@ -60,7 +60,7 @@ const ProjectSlider = ({data, error, loading, projects, title, number}) => {
           },
         }}
       >
-        {projects?.map((value) => {
+        {data?.map((value) => {
           return (
             <SwiperSlide className={styles.slide} key={value.id}>
               <Link to={`/project/${value.id}`} className={styles.link}>
